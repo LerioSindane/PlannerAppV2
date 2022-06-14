@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32505.426
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlannerAppV2", "PlannerAppV2\PlannerAppV2.csproj", "{61185AB6-2842-4BE1-954C-2F0B67330A10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61185AB6-2842-4BE1-954C-2F0B67330A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61185AB6-2842-4BE1-954C-2F0B67330A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61185AB6-2842-4BE1-954C-2F0B67330A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61185AB6-2842-4BE1-954C-2F0B67330A10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34A3FA52-6471-4B2A-9D49-45CACBC369B9}
+	EndGlobalSection
+EndGlobal
