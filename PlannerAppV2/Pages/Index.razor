@@ -8,6 +8,15 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
+<AuthorizeView>
+    <Authorized>
+        <h2>Seja Bem Vindo ao PlannerAppV2</h2>
+    </Authorized>
+    <NotAuthorized>
+        <MudLink Href="/authentication/login">Inicar Sessão</MudLink>
+    </NotAuthorized>
+</AuthorizeView>
+
 @code
 {
 
