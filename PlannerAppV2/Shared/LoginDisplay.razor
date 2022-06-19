@@ -1,0 +1,32 @@
+﻿@inject Blazored.LocalStorage.ILocalStorageService Storage
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager Navigation 
+
+@using System.Security.Claims
+
+<AuthorizeView>
+    <Authorized>
+        <MudMenu Icon="@Icons.Filled.Person" Color="Color.Secondary" Direction="Direction.Right" OffsetY="true">
+            <MudMenuItem>BemVindo @context.User.FindFirst(ClaimTypes.GivenName).Value</MudMenuItem>
+            <MudMenuItem OnClick="TerminarSessaoAsync">Terminar Sessão</MudMenuItem>
+        </MudMenu>
+    </Authorized>
+    <NotAuthorized>
+            <MudIconButton icon="@Icons.Filled.Login" Color="Color.Secondary" OnClick='()=> Navigation.NavigateTo("/authentication/login")' />
+    </NotAuthorized>
+</AuthorizeView>
+
+@code 
+{
+
+    private async Task TerminarSessaoAsync()
+    {
+        await Storage.RemoveItemAsync("access_token");
+        await Storage.RemoveItemAsync("expiry_date");
+
+        await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        Navigation.NavigateTo("/authentication/login");
+
+    }
+
+}
